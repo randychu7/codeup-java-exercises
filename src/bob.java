@@ -7,7 +7,7 @@ public class bob {
         String question = sc.nextLine();
 
 
-        if (question.charAt(question.length() - 1) == "?') {
+        if (question.charAt(question.length() - 1) == '?') {
             System.out.println("Bob: Sure Bitch");
         } else if (question.charAt(question.length() - 1) == '!') {
             System.out.println("Don't YELL AT ME BITCH");
@@ -25,6 +25,6 @@ public class bob {
 //            System.out.println("Bob: Sure.");
 //        }
 
-
+    }
 
 }
