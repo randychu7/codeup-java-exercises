@@ -20,6 +20,7 @@ public class bob {
         }
 
 
+
 //        if(question1.charAt(question1.length()-1) == '?'){
 //            System.out.println("Bob: Sure.");
 //        }
