@@ -59,32 +59,6 @@ public class MethodsExercise {
 //    }
 
 
-//    public static int getInteger (int min, int max){
-//        if (min )
-//    }
-//
-//    public static int getInteger(int lower, int upper) {
-//        Scanner scan = new Scanner(System.in);
-//                String input = scan.nextInt();
-//                if (input >= lower && input <= upper) {
-//                    System.out.println("In Range");
-//                } else {
-//                    System.out.println("Invalid input, please try again.");
-//                }
-
-//  2.  Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
-//
-//    The method signature should look like this:
-//
-//    public static int getInteger(int min, int max);
-
-//    and is used like this:
-//
-//            System.out.print("Enter a number between 1 and 10: ");
-//    int userInput = getInteger(1, 10);
-//    If the input is invalid, prompt the user again.
-
-
 
 //        public static int getInteger(int min, int max) {
 //            Scanner scanner = new Scanner(System.in);
@@ -104,45 +78,102 @@ public class MethodsExercise {
 //
 //        }
 
-    public static int getFactorial(int min, int max) {
+    public static int getFacto() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.print("Enter a number between " + min + " and " + max + ": ");
+            System.out.print("Enter a number between 1-10: ");
 
             if (scanner.hasNextInt()) {
                 int input = scanner.nextInt();
-                long factorial = input;
-                for (int i = 0; i < input; i++){
-                    factorial *= input;
+                if (input >= 1 && input <= 10) {
+                    long factorial = 1;
+                    for (int i = 1; i <= input; i++){
+                        factorial *= i;
+                    }
+                    return (int) factorial;
                 }
-                System.out.println("Your number is: " + factorial);
             }
-
             System.out.println("Invalid input. Try again.");
             scanner.nextLine();
         }
+    }
+//
 
+    public static void rollDice () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many sides are on first Dice");
+        int diceRoll1 = scanner.nextInt();
+        System.out.println("How many sides are on the second Dice?");
+        int diceRoll2 = scanner.nextInt();
+        System.out.println("Would you like to roll? y/n");
+        scanner.next();
+
+        boolean willContinue = true;
+        do {
+            int rolledDice1 = (int) (Math.random() * diceRoll1 + 1);
+            int rolledDice2 = (int) (Math.random() * diceRoll2 + 1);
+            System.out.println("The first dice is: "+ rolledDice1);
+            System.out.println("The second dice is:" + rolledDice2);
+
+            System.out.println("Do you want to roll again?? Y/N?");
+            String response = scanner.next();
+            if (response.equalsIgnoreCase("n")) {
+                willContinue = false;
+            }
+
+        } while (willContinue);
+        scanner.close();
     }
 
 
-    public static void main(String[] args){
+
+
+
+        public static void main(String[] args){
+//        rollDice();
         Scanner sc = new Scanner(System.in);
-        int getFacto = getFactorial(1,10);
-        System.out.println(getFacto);
+
+        int getFactorial = getFacto();
+        System.out.println("The factorial of the number is: " + getFactorial);
+
+        //Dice Roll
+
+//
 //        int userInput = getInteger(1, 10);
 //        System.out.println("You put in " + userInput + " that is in the scope");
+
+
+//        //FACTORIAL WITH RECURSION
+
+//        public static int getFactorial(int num) {
+//        if (num == 0) {
+//            return 1;
+//        }
+//        return num * getFactorial(num - 1);
+//        }
 //
-
-
-
-
-        int UserInput = sc.nextInt();
-//        long original= UserInput;
-//             for (int i = 0; i < UserInput; i++){
-//                original *= UserInput;
-//             }
 //
-//        System.out.println(original);
+//
+//        public static void main(String[] args) {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.print("Enter a number between 1-10: ");
+//
+//            if (scanner.hasNextInt()) {
+//                int input = scanner.nextInt();
+//                if (input >= 1 && input <= 10) {
+//                    int factorial = getFactorial(input);
+//                    System.out.println("The factorial of the number is: " + factorial);
+//                } else {
+//                    System.out.println("Invalid input. Try again.");
+//                }
+//            } else {
+//                System.out.println("Invalid input. Try again.");
+//            }
+//            scanner.close();
+
+
+
+
 
 
 
