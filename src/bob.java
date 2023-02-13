@@ -7,28 +7,18 @@ public class bob {
         String question = sc.nextLine();
 
 
-        if (question.charAt(question.length() - 1) == '?') {
-            System.out.println("Bob: Sure Bitch");
-        } else if (question.charAt(question.length() - 1) == '!') {
-            System.out.println("Don't YELL AT ME BITCH");
-        } else if (question == " "){
-            System.out.println("Fine. Be that way BITCH");
-        }else{
-            System.out.println("Whatever....bitch");
-        }
-
-
-
-        }
-
-
-
-
-
-//        if(question1.charAt(question1.length()-1) == '?'){
-//            System.out.println("Bob: Sure.");
-//        }
+            if (question.endsWith("?")) {
+                System.out.println("Bob: Sure Bitch");
+                } else if (question.endsWith("!")) {
+                    System.out.println("Don't YELL AT ME BITCH");
+                } else if (question.endsWith(" ")){
+                    System.out.println("Fine. Be that way BITCH");
+                }else{
+                    System.out.println("Whatever....bitch");
+                }
 
     }
+
+
 
 }
