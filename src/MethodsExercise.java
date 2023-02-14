@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class MethodsExercise {
+
 //    public static int addition(int number1, int number2){
 //        return number1 + number2;
 //
@@ -60,81 +61,81 @@ public class MethodsExercise {
 
 
 
-//        public static int getInteger(int min, int max) {
-//            Scanner scanner = new Scanner(System.in);
-//            while (true) {
-//                System.out.print("Enter a number between " + min + " and " + max + ": ");
+        public static int getInteger(int min, int max) {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                System.out.print("Enter a number between " + min + " and " + max + ": ");
+
+                if (scanner.hasNextInt()) {
+                    int input = scanner.nextInt();
+                    if (input >= min && input <= max) {
+                        return input;
+                    }
+                }
+
+                System.out.println("Invalid input. Try again.");
+                scanner.nextLine();
+            }
+
+        }
+
+//    public static int getFacto() {
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//            System.out.print("Enter a number between 1-10: ");
 //
-//                if (scanner.hasNextInt()) {
-//                    int input = scanner.nextInt();
-//                    if (input >= min && input <= max) {
-//                        return input;
+//            if (scanner.hasNextInt()) {
+//                int input = scanner.nextInt();
+//                if (input >= 1 && input <= 10) {
+//                    long factorial = 1;
+//                    for (int i = 1; i <= input; i++){
+//                        factorial *= i;
 //                    }
+//                    return (int) factorial;
 //                }
+//            }
+//            System.out.println("Invalid input. Try again.");
+//            scanner.nextLine();
+//        }
+//    }
+////
 //
-//                System.out.println("Invalid input. Try again.");
-//                scanner.nextLine();
+//    public static void rollDice () {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("How many sides are on first Dice");
+//        int diceRoll1 = scanner.nextInt();
+//        System.out.println("How many sides are on the second Dice?");
+//        int diceRoll2 = scanner.nextInt();
+//        System.out.println("Would you like to roll? y/n");
+//        scanner.next();
+//
+//        boolean willContinue = true;
+//        do {
+//            int rolledDice1 = (int) (Math.random() * diceRoll1 + 1);
+//            int rolledDice2 = (int) (Math.random() * diceRoll2 + 1);
+//            System.out.println("The first dice is: "+ rolledDice1);
+//            System.out.println("The second dice is:" + rolledDice2);
+//
+//            System.out.println("Do you want to roll again?? Y/N?");
+//            String response = scanner.next();
+//            if (response.equalsIgnoreCase("n")) {
+//                willContinue = false;
 //            }
 //
-//        }
+//        } while (willContinue);
+//        scanner.close();
+//    }
 
-    public static int getFacto() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.print("Enter a number between 1-10: ");
 
-            if (scanner.hasNextInt()) {
-                int input = scanner.nextInt();
-                if (input >= 1 && input <= 10) {
-                    long factorial = 1;
-                    for (int i = 1; i <= input; i++){
-                        factorial *= i;
-                    }
-                    return (int) factorial;
-                }
-            }
-            System.out.println("Invalid input. Try again.");
-            scanner.nextLine();
-        }
-    }
+
+
+
+//        public static void main(String[] args){
+////        rollDice();
+//        Scanner sc = new Scanner(System.in);
 //
-
-    public static void rollDice () {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How many sides are on first Dice");
-        int diceRoll1 = scanner.nextInt();
-        System.out.println("How many sides are on the second Dice?");
-        int diceRoll2 = scanner.nextInt();
-        System.out.println("Would you like to roll? y/n");
-        scanner.next();
-
-        boolean willContinue = true;
-        do {
-            int rolledDice1 = (int) (Math.random() * diceRoll1 + 1);
-            int rolledDice2 = (int) (Math.random() * diceRoll2 + 1);
-            System.out.println("The first dice is: "+ rolledDice1);
-            System.out.println("The second dice is:" + rolledDice2);
-
-            System.out.println("Do you want to roll again?? Y/N?");
-            String response = scanner.next();
-            if (response.equalsIgnoreCase("n")) {
-                willContinue = false;
-            }
-
-        } while (willContinue);
-        scanner.close();
-    }
-
-
-
-
-
-        public static void main(String[] args){
-//        rollDice();
-        Scanner sc = new Scanner(System.in);
-
-        int getFactorial = getFacto();
-        System.out.println("The factorial of the number is: " + getFactorial);
+//        int getFactorial = getFacto();
+//        System.out.println("The factorial of the number is: " + getFactorial);
 
         //Dice Roll
 
@@ -152,25 +153,71 @@ public class MethodsExercise {
 //        return num * getFactorial(num - 1);
 //        }
 //
-//
-//
-//        public static void main(String[] args) {
-//            Scanner scanner = new Scanner(System.in);
-//            System.out.print("Enter a number between 1-10: ");
-//
-//            if (scanner.hasNextInt()) {
-//                int input = scanner.nextInt();
-//                if (input >= 1 && input <= 10) {
-//                    int factorial = getFactorial(input);
-//                    System.out.println("The factorial of the number is: " + factorial);
-//                } else {
-//                    System.out.println("Invalid input. Try again.");
-//                }
-//            } else {
-//                System.out.println("Invalid input. Try again.");
-//            }
-//            scanner.close();
 
+//   public String getUserDate(){
+//       return "getting date";
+//   };
+
+    public void guessGame(){
+        Scanner scanner = new Scanner(System.in);
+        double random = Math.random();
+        double x = random*100;
+        int randomNum = (int)x + 1; //Add 1 to change the range to 1 - 100 instead of 0 - 99
+        System.out.println(randomNum);
+        boolean keepContinue = true;
+        int guessCount = 0;
+
+        System.out.println("Guess a number between 1-100");
+
+        do {
+            System.out.println("Current guess count: " + guessCount +"/10");
+
+        int userGuess = scanner.nextInt();
+
+            if (guessCount == 10){
+                keepContinue = false;
+                System.out.println("No more guesses");
+            } else if (userGuess < randomNum) {
+                System.out.println("Higher");
+                keepContinue = true;
+                guessCount += 1;
+            } else if (userGuess > randomNum) {
+                keepContinue = true;
+                System.out.println("Guess Lower");
+                guessCount += 1;
+            } else if (userGuess == randomNum){
+                keepContinue = false;
+                System.out.println("Good Guess!");
+            }
+
+        }while(keepContinue);
+
+
+    }
+
+
+
+        public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+//                guessGame();
+
+
+    //            getUserDate();
+    //            System.out.print("Enter a number between 1-10: ");
+    //
+    //            if (scanner.hasNextInt()) {
+    //                int input = scanner.nextInt();
+    //                if (input >= 1 && input <= 10) {
+    //                    int factorial = getFactorial(input);
+    //                    System.out.println("The factorial of the number is: " + factorial);
+    //                } else {
+    //                    System.out.println("Invalid input. Try again.");
+    //                }
+    //            } else {
+    //                System.out.println("Invalid input. Try again.");
+    //            }
+
+//
 
 
 
