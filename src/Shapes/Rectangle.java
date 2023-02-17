@@ -21,7 +21,5 @@ public class Rectangle {
         return length * width;
     }
 
-//    perimeter = 2 x length + 2 x width
-//    area = length x width
 
 }
