@@ -49,6 +49,8 @@ public class Animal {
         System.out.println();
     }
 
+
+
     // Constructer
     public Animal(int legs, String climate){
         this.numberOfLegs = legs;
