@@ -29,13 +29,14 @@ public class Person {
     public static Person[] addPerson(Person[] people, Person dude) {
         //Creating a copy of Array +1
         Person[] people1 = Arrays.copyOf(people, people.length + 1);
+
         //People.length is now 5 so assigning dude to the 4th slot
         people1[people.length] = dude;
         //The main array is now replaced by new Array
         people = people1;
         return people;
-    }
 
+    }
 
 //    public static Person[] addPersonInFront(Person[] people, Person dude) {
 //        //Creating a copy of Array +1
