@@ -1,39 +1,27 @@
 package Shapes;
 
 public class Rectangle {
-    private static int length;
-    private static int width;
+    protected int length;
+    protected int width;
 
     public Rectangle(int length, int width) {
         this.length = length;
         this.width = width;
     }
-    //Getter
-    public static int getLength() {
-        return length;
+
+    public int getPerimeter(){
+        return 2 * length + 2 * width;
     }
 
-    public static int getWidth() {
-        return width;
-    }
-    //Setter
-
-    public void setLength(int length) {
-        this.length = length;
+    public int getArea(){
+        return length * width;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public static int getArea(int length, int width){
+        return length * width;
     }
 
-    public static int getArea(Rectangle box){
-        return getLength() * getWidth();
-    }
-
-    public static int getPerimeter(Rectangle area){
-        return 2 * getLength() + 2 * getWidth();
-    }
-
-
+//    perimeter = 2 x length + 2 x width
+//    area = length x width
 
 }

@@ -3,19 +3,13 @@ package Shapes;
 public class ShapesTest {
     public static void main(String[] args) {
         Rectangle box1 = new Rectangle(5,4);
-        Rectangle box2 = new Square(5,4, 5);
+        Rectangle box2 = new Square(5);
+//        System.out.println(box1.getArea());
+//        System.out.println(box1.getPerimeter());
+        System.out.println(box2.getArea());
+        System.out.println(box2.getPerimeter());
 
-        int box1Area = Rectangle.getArea(box1);
-        int box1Perm = Rectangle.getPerimeter(box1);
-
-//        System.out.println(box1Area);
-//        System.out.println(box1Perm);
-        System.out.println(Square.getArea(box2));
-        System.out.println(Square.getPerimeter(box2));
-//        System.out.println(Rectangle.getPerimeter(box2));
-
-
-
+//        System.out.println(Rectangle.getArea(4 , 5));
 
     }
 }
