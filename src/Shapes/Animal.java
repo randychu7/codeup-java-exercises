@@ -54,6 +54,7 @@ public class Animal {
         this.numberOfLegs = legs;
         this.preferredClimate = climate;
 
+
     }
 
 
