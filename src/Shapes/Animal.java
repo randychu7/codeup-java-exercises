@@ -56,8 +56,6 @@ public class Animal {
         this.preferredClimate = climate;
 
 
-
-
     }
 
 
