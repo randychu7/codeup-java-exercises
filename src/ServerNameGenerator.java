@@ -10,9 +10,7 @@ public class ServerNameGenerator {
         Random random = new Random();
         int randomName = random.nextInt(9);
         int randomName1 = random.nextInt(9);
-
-
-        return String.format( "Your server name is %s %s ",adjArray[randomName],nounArray[randomName1]);
+        return String.format( "Your server name is\n %s-%s ",adjArray[randomName],nounArray[randomName1]);
     }
 
     public static String[] adjArray = {

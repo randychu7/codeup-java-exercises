@@ -27,10 +27,13 @@ public class Movie {
     public Movie(String name, String category){
         this.name = name;
         this.category=category;
-
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
