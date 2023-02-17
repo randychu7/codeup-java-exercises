@@ -50,7 +50,6 @@ public class Animal {
     }
 
 
-
     // Constructer
     public Animal(int legs, String climate){
         this.numberOfLegs = legs;
