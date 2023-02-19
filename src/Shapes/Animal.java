@@ -45,8 +45,9 @@ public class Animal {
         this.preferredClimate = climate;
     }
 
+
     public void getAnimalInfo(){
-        System.out.println();
+        System.out.printf("This animal has %d and its preferred climate is %s" ,numberOfLegs, preferredClimate);
     }
 
 
