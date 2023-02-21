@@ -1,4 +1,4 @@
-package Shapes;
+package Animal;
 //# Inheritance and Polymorphism Bonus
 //
 //        Create a class of Animal
@@ -46,8 +46,8 @@ public class Animal {
     }
 
 
-    public void getAnimalInfo(){
-        System.out.printf("This animal has %d and its preferred climate is %s" ,numberOfLegs, preferredClimate);
+    public String getAnimalInfo(){
+        return String.format("This animal has %d legs and its preferred climate is %s" ,numberOfLegs, preferredClimate);
     }
 
 
